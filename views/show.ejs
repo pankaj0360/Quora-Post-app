@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quora - A place to share knowledge and better understand the world</title>
+    <link rel="icon" href="//qsf.fs.quoracdn.net/-4-ans_frontend_assets.favicon-new.ico-26-e7e93fe0a7fbc991.ico">
+    <link rel="stylesheet" href="/home.css">
+</head>
+<body>
+    <h1>Detailed Post</h1>
+
+    <div class="posts">
+        <h2 style="color: blue;">ID: <%= post.id %></h2>
+        <h3>@<%= post.username %></h3>
+        <h4><%= post.content %></h4>
+
+        <% if (post.photo) { %>
+            <p>Photo:</p>
+            <img src="<%= post.photo %>" alt="Post photo" class="post-photo" width="300" />
+        <% } %>
+    </div>
+</body>
+</html>

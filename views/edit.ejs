@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quora - A place to share knowledge and better understand the world</title>
+    <link rel="icon" href="//qsf.fs.quoracdn.net/-4-ans_frontend_assets.favicon-new.ico-26-e7e93fe0a7fbc991.ico">
+    <link rel="stylesheet" href="/home.css">
+</head>
+<body style="text-align: center;">
+    <h2>Edit your Post</h2>
+    <p>ID: <%= post.id %></p>
+    <p>Username: <%= post.username %></p>
+
+    <% if (post.photo) { %>
+        <p>Current Photo:</p>
+        <img src="<%= post.photo %>" width="200" alt="Current Photo">
+    <% } %>
+
+    <form action="/posts/<%= post.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+        <textarea name="content" placeholder="Write your updated content" required cols="50" rows="10"><%= post.content %> </textarea>
+        <br><br>
+        <label>Upload New Photo (optional):</label>
+        <input type="file" name="photo" accept="image/*">
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# Force consistent line endings
+* text=auto
+
+# Set LF line endings for specific files (common in Node.js projects)
+*.js     text eol=lf
+*.json   text eol=lf
+*.css    text eol=lf
+*.html   text eol=lf
+*.ejs    text eol=lf
+*.md     text eol=lf
+*.sh     text eol=lf
